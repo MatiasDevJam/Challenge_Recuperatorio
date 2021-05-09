@@ -15,7 +15,7 @@ editar nada de la base de datos sino trabajar exclusivamente en el archivo de mo
 Por último, el alias de dicho modelo debe ser Categoria para que todo funcione
 correctamente. (Esto ya se encuentra configurado en el archivo)
   
- 2. Ruta
+## 2. Ruta
 Notarás que al intentar registrarte, la página no esta funcionando. En este caso se debe a
 que la ruta que procesa la registración no está definida.
 Tu trabajo será completarla en usuario.js para que todo funcione.
