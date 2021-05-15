@@ -34,7 +34,7 @@ module.exports = {
         db.Producto.findAll({
 			where : {
 				nombre : {
-					[Op.like] : `%${req.query.busqueda}%`
+					[op.like] : `%${req.query.busqueda}%`
 				}
 			}
 		
@@ -72,24 +72,25 @@ module.exports = {
         }
         res.render('agregarProducto', { title: 'Agregar Producto'});
     },
+       
 
     productoSubmit: function (req,res) {
         if (req.session.usuarioLogueado == undefined) {
             res.redirect("/");
         }
        
-        //configuro agregar productos
-        const {nombre, marca, imagen, precio, categoria} = req.body;
-        db.Producto.create({
-            nombre: nombre,
-            marca: marca,
-            img_url: imagen,
-            precio: +precio,
-            categoria_id: +categoria
-        })
-        .then(() =>{
-            return res.redirect('/')
-        })
+         //configuro agregar productos
+         const {nombre, marca, imagen, precio, categoria} = req.body;
+         db.Producto.create({
+             nombre: nombre,
+             marca: marca,
+             img_url: imagen,
+             precio: +precio,
+             categoria_id: +categoria
+         })
+         .then(() =>{
+             return res.redirect('/')
+         })
 
     },
 

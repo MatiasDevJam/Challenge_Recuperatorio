@@ -93,7 +93,8 @@ module.exports = {
     },
 
     logout: function (req,res) {
-        if (req.session.usuarioLogueado != undefined) {
+        //modificacion para el logout del usuario
+        if (req.session.usuarioLogueado = undefined) {
             res.redirect("/");
         }
         req.session.usuarioLogueado = undefined;
