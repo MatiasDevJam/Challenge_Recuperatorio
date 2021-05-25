@@ -7,19 +7,24 @@ module.exports = (sequelize, DataTypes) => {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
-            primaryKey: true
+            primaryKey: true,
+            allowNull: false
         },
        texto_comentario: {
-           type: DataTypes.STRING
+           type: DataTypes.STRING,
+           allowNull: false
        },
        calificacion: {
-           type: DataTypes.INTEGER
+           type: DataTypes.INTEGER,
+           allowNull: false
        },
        producto_id: {
-           type: DataTypes.INTEGER
+           type: DataTypes.INTEGER,
+           allowNull: false
        },
        usuario_id: {
-           type: DataTypes.INTEGER
+           type: DataTypes.INTEGER,
+           allowNull: false
        }
     };
 

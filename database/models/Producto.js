@@ -7,25 +7,32 @@ module.exports = (sequelize, DataTypes) => {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
-            primaryKey: true
+            primaryKey: true,
+            allowNull: false
         },
         nombre: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
         marca: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
         precio: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
         img_url: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false,
+            allowNull: false
         },
         categoria_id: {
             type: DataTypes.INTEGER,
+            allowNull: false
         },
         usuario_id: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
         }
     };
 
